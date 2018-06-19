@@ -1,7 +1,7 @@
 from gpiozero import LED
 from time import sleep
 
-# red = 17 yellow =27 green =22 
+# bred = 17 yellow =27 green =22 
 red_led      = LED(17) # under weight and obese
 yellow_led   = LED(27) # overweight
 green_led    = LED(22) # normal weight
