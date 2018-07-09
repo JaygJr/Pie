@@ -1,6 +1,11 @@
 from time import sleep
 from gpiozero import LED
-# bred = 17 yellow =27 green =22
+
+# ToDo accept input for positive  integers ONLY, and make it a function 
+# ToDo change bmi height/weight calculations to a function
+# ToDo  change code for RGB LED tesing 
+
+# red = 17 yellow =27 green =22
 RED_LED      = LED(17) # under weight and obese
 YELLOW_LED   = LED(27) # overweight
 GREEN_LED    = LED(22) # normal weight
