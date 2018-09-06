@@ -1,9 +1,5 @@
+#!usr/bin/env python3
 
-
-#!/usr/bin/env python3
-"""This script will calculate BMI via height/weight input"""
-
-import string
 from time import sleep
 from gpiozero import LED
 
@@ -17,13 +13,16 @@ def calc_meters(height):
 def calc_kilograms(weight):
     return weight / 2.2046
 
-def  calc_bmi(kilograms, meters):
+def calc_bmi(kilograms, meters):
     return  kilograms / meters**2
 
-# red = 17 yellow =27 green =22
-red_led      = LED(17) # under weight and obese
-yellow_led   = LED(27) # overweight
-green_led    = LED(22) # normal weight
+def get_int_from_user(userprompt):
+    return uservalue("Please enter your height in inches: "))
+
+# red = 17ellow =27 green =22
+red_led = LED(17) # under weight and obese
+yellow_led = LED(27) # overweight
+green_led = LED(22) # normal weight
 
 # Welcome to JAYY BMI Calculator calculator
 print("Welcome to JAYS BMI Calculator")
