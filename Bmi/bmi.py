@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 
 from time import sleep
 from gpiozero import LED
@@ -17,7 +17,8 @@ def calc_bmi(kilograms, meters):
     return  kilograms / meters**2
 
 def get_int_from_user(userprompt):
-    return uservalue("Please enter your height in inches: "))
+    return  int(input(userprompt))
+
 
 # red = 17ellow =27 green =22
 red_led = LED(17) # under weight and obese
@@ -25,14 +26,10 @@ yellow_led = LED(27) # overweight
 green_led = LED(22) # normal weight
 
 # Welcome to JAYY BMI Calculator calculator
-print("Welcome to JAYS BMI Calculator")
-print()
+print("Welcome to JAYS BMI Calculator\n")
 
-# Get height from user,
-# Code for get  inches initially.Then later, change to ft/in.
-# Then convert back to inches
 # Get height from user
-height = int(input("Please enter your height in inches: "))
+height = get_int_from_user("Please enter your height in inches: ")
 
 # Convert from inches to meters
 # inches * 0.0254
@@ -41,12 +38,11 @@ print("your height in meters is: " + str(meters))
 
 # Convert from meters to centimeters
 # multiply meters X 100
-centimeters = meters * 100
-print("your height in centimeters is: " + str(centimeters))
-
+###centimeters = meters * 100
+###print("your height in centimeters is: " + str(centimeters))
 
 # Get weight from user
-weight = int(input("Please enter your weight in pounds: "))
+weight = get_int_from_user("Please enter your weight in pounds: ")
 print()
 
 #convert from pounds to kilograms
@@ -83,3 +79,5 @@ elif BMI >= 30:
     print("obese")
     red_led.on()
     sleep(5)
+
+def display_bmi_category()

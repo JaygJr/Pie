@@ -1,6 +1,0 @@
-
-# Calculate the BMI via two metric input parameters 
-
-def  calc_bmi(kilograms, meters):
-    return  kilograms / meters**2
-
